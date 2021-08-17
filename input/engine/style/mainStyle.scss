@@ -1,0 +1,65 @@
+@mixin centerItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    @include centerItems();
+}
+
+.input-container {
+    width: 520px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1.3px solid rgba(0, 0, 0, .4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    cursor: pointer;
+    @media screen and (max-width: 576px) {
+        width: 420px;
+    }
+    @media screen and (max-width: 425px) {
+        width: 350px;
+    }
+    @media screen and (max-width: 360px) {
+        width: 260px;
+    }
+    .input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: none;
+        padding: 10px;
+        padding-left: 8px;
+        font-size: .9rem;
+        opacity: .8;
+        cursor: pointer;
+    }
+    .placeholder {
+        background-color: white;
+        display: inline;
+        padding: 0px 8px 6px 8px;
+        box-sizing: content-box;
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        transition: top .2s, font-size .2s;
+    }
+}
+
+.input:focus+.placeholder {
+    top: -12px;
+    font-size: .8rem;
+}

@@ -1,0 +1,82 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-container {
+  width: 520px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1.3px solid rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .input-container {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .input-container {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .input-container {
+    width: 260px;
+  }
+}
+
+.input-container .input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  padding: 10px;
+  padding-left: 8px;
+  font-size: .9rem;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.input-container .placeholder {
+  background-color: white;
+  display: inline;
+  padding: 0px 8px 6px 8px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  -webkit-transition: top .2s, font-size .2s;
+  transition: top .2s, font-size .2s;
+}
+
+.input:focus + .placeholder {
+  top: -12px;
+  font-size: .8rem;
+}
+/*# sourceMappingURL=mainStyle.css.map */
