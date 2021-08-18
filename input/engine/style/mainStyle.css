@@ -73,10 +73,11 @@ body {
   left: 5px;
   -webkit-transition: top .2s, font-size .2s;
   transition: top .2s, font-size .2s;
+  color : rgba(0,0,0,0.65)
 }
 
 .input:focus + .placeholder {
-  top: -12px;
+  top: -11px;
   font-size: .8rem;
 }
 /*# sourceMappingURL=mainStyle.css.map */
